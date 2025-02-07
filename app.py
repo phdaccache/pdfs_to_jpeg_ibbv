@@ -86,6 +86,7 @@ uploaded_pdfs = st.file_uploader("Upload PDFs", accept_multiple_files=True, type
 
 # Choose order of PDFs and images (excluding special PDF pages)
 all_files = []
+
 if uploaded_pdfs:
     all_files.extend([pdf.name for pdf in uploaded_pdfs])
 
