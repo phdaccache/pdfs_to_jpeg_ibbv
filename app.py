@@ -95,6 +95,7 @@ if uploaded_pdfs:
 reordered_files = st.multiselect("Choose final order of PDFs and images:", all_files, default=[])
 
 if (selected_pages or reordered_files) and st.button("Convert and Download"):
+    shutil.rmtree("pdf_images")
     output_folder = "pdf_images"
     special_image_files = []
     normal_image_files = []
