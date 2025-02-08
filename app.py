@@ -4,6 +4,7 @@ import zipfile
 from pdf2image import convert_from_bytes
 from PyPDF2 import PdfReader
 from io import BytesIO
+import shutil
 
 # Function to save images sequentially
 def save_images_sequentially(image_list, output_folder, start_index):
@@ -134,3 +135,5 @@ if (selected_pages or reordered_files) and st.button("Convert and Download"):
     final_zip_buffer.seek(0)
 
     st.download_button("Download Final Merged ZIP", data=final_zip_buffer, file_name="final_combined_images.zip", mime="application/zip")
+
+    shutil.rmtree("pdf_images")
