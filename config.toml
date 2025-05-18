@@ -1,1 +1,1 @@
-[server] enableXsrfProtection = False
+[server] enableXsrfProtection = false
